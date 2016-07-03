@@ -10,7 +10,7 @@ class ListingFinishedBooksTest < ActionDispatch::IntegrationTest
   test 'list finished books in xml' do
     get '/finished_books' ,{},{'Accept' => 'application/xml'}
     assert_equal 200,response.status
-    assert_equal Mime::JSON, response.content_type
+    assert_equal Mime::XML, response.content_type
   end
 
 end
