@@ -8,6 +8,12 @@ class BooksController < ApplicationController
   end
 
   def index
-    render json: Book.all, status: 200
+    books = []
+    if rating = params[:rating]
+      books = Book.where(rating: rating)
+    else
+      books = Book.all
+    end
+    render json: books, status: 200
   end
 end
