@@ -8,6 +8,6 @@ class BooksController < ApplicationController
   end
 
   def index
-    render json: '', status: 200
+    render json: Book.all, status: 200
   end
 end
