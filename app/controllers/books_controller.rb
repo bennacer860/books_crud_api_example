@@ -22,7 +22,7 @@ class BooksController < ApplicationController
     if book.save
       render json: book, status: 201, location: book
     else
-
+      render json: book.errors, status: 422
     end
   end
 
