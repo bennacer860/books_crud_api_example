@@ -16,4 +16,18 @@ class BooksController < ApplicationController
     end
     render json: books, status: 200
   end
+
+  def create
+    book = Book.new(book_params)
+    if book.save
+      render json: book, status: 201, location: book
+    else
+
+    end
+  end
+
+
+  def book_params
+    params.require(:book).permit(:title,:rating)
+  end
 end
