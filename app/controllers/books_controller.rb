@@ -1,4 +1,4 @@
-class BooksController < ApplicationController
+class Api::V1::BooksController < ApplicationController
   # skip_before_action :verify_authenticity_token, if: :json_request?
   protect_from_forgery with: :null_session, if: Proc.new {|c| c.request.format.json? }
 

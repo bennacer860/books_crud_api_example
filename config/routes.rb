@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  
-  resources :books
-  resources :finished_books, only: :index
+  namespace :api do
+    namespace :v1 do
+      resources :books
+      resources :finished_books, only: :index
+    end
+  end
 end
