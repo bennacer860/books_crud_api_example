@@ -1,3 +1,5 @@
+This is an rails app that implement an API of the following endpoints with test
+
 ```
                Prefix Verb   URI Pattern                      Controller#Action
          api_v1_books GET    /api/v1/books(.:format)          api/v1/books#index
