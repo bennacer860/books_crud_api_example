@@ -1,4 +1,4 @@
-This is an rails app that implement an API of the following endpoints with Integration Tests:
+This is a simple rails app that implement an API of the following endpoints with Integration Tests and return the right HTTP status:
 
 ```
                Prefix Verb   URI Pattern                      Controller#Action
